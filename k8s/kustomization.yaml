@@ -8,4 +8,4 @@ resources:
 images:
 - name: goserver
   newName: mmkusma/gitopsfc
-  newTag: 6eff712ed94a5278761f4b1afd6c73b2878460bb
+  newTag: cdf9d0ecec580c43d29d246f9808e7f5d98ab04f
