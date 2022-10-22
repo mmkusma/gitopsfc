@@ -14,7 +14,6 @@
     5.3 git commit -m "first commit"
     5.4 git remote add origin git@github.com:mmkusma/gitopsfc.git
     5.5 git push -u origin main
-
 6. Preparando o Kubernetes
     6.1 Criar o cluster no kind: kind create cluster --name gitopsfc
     6.2 Aplicar o contexto: kubectl cluster-info --context kind-gitopsfc
@@ -23,6 +22,23 @@
     7.1 Instalar: brew install kustomize
     7.2 preparar arquivo kustomization.yaml
     7.3 Instalar o kustomize no cd.yaml
+    7.4 Incluir no cd.yaml os passos para mudar o arquivo do kustomize
+8. Aplicar no kubernetes: kubectl apply -f k8s/
+    8.1 Para validar: 
+        kubectl get deploy
+        kubectl get service ou kubectl get svc
+9. Instalar o Arco CD
+    https://argo-cd.readthedocs.io/en/stable/
+    9.1 Para validar: kubectl get all -n argocd
 
-    
+10. Login no Argo CD
+    10.1 buscar a senha
+    kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+    6dmt7nvmqy0uyYMS
+    10.2 Executar o port forward para subir o Argo
+    kubectl port-forward svc/argocd-server -n argocd 8092:443
+    https://localhost:8092
+    admin / 6dmt7nvmqy0uyYMS
+
+
 
