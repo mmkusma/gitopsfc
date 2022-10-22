@@ -14,3 +14,4 @@
     5.3 git commit -m "first commit"
     5.4 git remote add origin git@github.com:mmkusma/gitopsfc.git
     5.5 git push -u origin main
+
