@@ -15,3 +15,14 @@
     5.4 git remote add origin git@github.com:mmkusma/gitopsfc.git
     5.5 git push -u origin main
 
+6. Preparando o Kubernetes
+    6.1 Criar o cluster no kind: kind create cluster --name gitopsfc
+    6.2 Aplicar o contexto: kubectl cluster-info --context kind-gitopsfc
+    6.3 Criar o deployment.yaml e service.yaml
+7. Kustomize
+    7.1 Instalar: brew install kustomize
+    7.2 preparar arquivo kustomization.yaml
+    7.3 Instalar o kustomize no cd.yaml
+
+    
+
