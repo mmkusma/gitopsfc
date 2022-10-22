@@ -17,7 +17,7 @@ jobs:
       uses: docker/build-push-action@v1.1.0
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.git init }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
         repository: ${{ secrets.DOCKERHUB_USERNAME }}/gitopsfc
         tags: ${{ github.sha }}, latest
 
